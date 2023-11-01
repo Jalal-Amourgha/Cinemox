@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <title>Movie Raiting</title>
+</head>
+
+<body>
+    <!-- Home Section-->
+    <section class="home-page">
+        <div class="d-flex justify-content-center align-center flex-column z-2">
+            <h1 class="text-uppercase">rate your favorite series & movies</h1>
+            <a href="#searchPage">Rate Now</a>
+        </div>
+    </section>
+
+    <!--Search Section-->
+    <section class="search-page" id="searchPage">
+        <div class="container">
+            <div class="search-box d-flex justify-content-center align-center flex-column text-center mt-5 mb-5">
+                <h1 class="text-uppercase">search for your favorite serie or movie</h1>
+                <div class="d-flex m-auto mt-3 mb-3">
+                    <div>
+                        <input id="input" type="text" placeholder="Search Here">
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </div>
+                    <button onclick="search()">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Searched Section-->
+    <section id="recentResearches">
+        <div class="container">
+            <h3 class="text-uppercase result-title mb-5">recent searches :</h3>
+            <div class="row" id="searched">
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-5 text-center">
+                    <img class="img-fluid" src="images/1.jpg" alt="The Walking Dead" />
+                    <h3 class="title mt-3 mb-3">The Walking Dead</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-5 text-center">
+                    <img class="img-fluid" src="images/2.jpg" alt="The Shawshank Redemption" />
+                    <h3 class="title mt-3 mb-3">The Shawshank Redemption</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-5 text-center">
+                    <img class="img-fluid" src="images/3.jpg" alt="The Green Mile" />
+                    <h3 class="title mt-3 mb-3">Thee Green Mile</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-5 text-center">
+                    <img class="img-fluid" src="images/4.jpg" alt="Game Of Thrones" />
+                    <h3 class="title mt-3 mb-3">Game Of Thrones</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-5 text-center">
+                    <img class="img-fluid" src="images/5.jpg" alt="Breaking Bad" />
+                    <h3 class="title mt-3 mb-3">Breaking Bad</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-5 text-center">
+                    <img class="img-fluid" src="images/6.jpg" alt="Lost" />
+                    <h3 class="title mt-3 mb-3">Lost</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-5 text-center">
+                    <img class="img-fluid" src="images/7.jpg" alt="The Last Kingdom" />
+                    <h3 class="title mt-3 mb-3">The Last Kingdom</h3>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 mb-5 text-center">
+                    <img class="img-fluid" src="images/8.jpg" alt="The Pit" />
+                    <h3 class="title mt-3 mb-3">The Pit</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Result Section-->
+    <section id="resultBox">
+    </section>
+
+    <!--List Of Items Picked-->
+    <section class="list-section">
+        <div class="container">
+            <h2 class="mt-4 mb-4">Your Rates :</h2>
+            <div class="bar">
+                <h5>Serie</h5>
+                <h5>Name</h5>
+                <h5>Rate</h5>
+                <h5>Note</h5>
+                <h5>Delete</h5>
+            </div>
+            <div id="list">
+            </div>
+        </div>
+    </section>
+
+    <!--Rate Window-->
+    <div id="rate">
+        <div id="rateBox">
+            <h2 id="title"></h2>
+            <div class="d-flex justify-content-between mt-4 mb-4">
+                <h5>Rate out of 10 : </h5>
+                <input id="rateScore" type="number" id="" placeholder="8.5" max="10" min="0">
+            </div>
+            <div class="d-flex justify-content-between mb-4">
+                <h5>Let a Note :</h5>
+                <textarea name="" id="note" rows="7" cols="30" placeholder="Best Serie I've Ever Watched"></textarea>
+            </div>
+            <button id="saveItem">Rate</button>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/all.min.js"></script>
+
+</html>

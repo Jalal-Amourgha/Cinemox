@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #e50914;
+}
+
+/* Start Home Section */
+
+.home-page {
+  background-image: url("../images/backgroundimage.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: var(--main-color);
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+.home-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.795);
+}
+
+.home-page a {
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 15px;
+  font-size: 20px;
+  font-weight: 500;
+  background: var(--main-color);
+  color: white !important;
+  margin: 5% auto;
+}
+
+/* End Home Section */
+
+/* Start - Search Section */
+
+.search-page {
+  margin: 5% 0%;
+}
+
+.search-box .input-box {
+  border: 2px solid var(--main-color) !important;
+  border-radius: 30px;
+  width: 50%;
+  margin: auto;
+}
+
+.search-box .input-group-text {
+  background: none !important;
+  border: none !important;
+}
+
+.search-box input {
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+  background: none !important;
+  font-size: 25px;
+  padding: 8px 15px;
+}
+
+.search-box input:focus {
+  outline: none !important;
+}
+
+.search-page button {
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  background: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 5px 15px;
+}
+
+.search-box span {
+  position: relative;
+  font-size: 25px;
+  right: 50px;
+  color: var(--main-color);
+}
+
+/* End - Search Section */
+
+/* Start - Result Section */
+
+#resultBox button {
+  border: none;
+  border-radius: 50px;
+  padding: 8px 15px;
+  background: var(--main-color);
+  font-size: 20px;
+  color: white;
+}
+
+img {
+  height: 100%;
+  margin: auto;
+}
+
+.img-fluid {
+  height: 50vh !important;
+}
+
+.box-informations {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* End - Result Section */
+
+/* Start - Section */
+
+.rate {
+  background: aquamarine;
+  padding: 30px;
+  border: 1px solid black;
+  position: absolute;
+  top: 160%;
+}
+
+#rate {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  z-index: 9999;
+}
+
+#rateBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+}
+
+#closeButton {
+  margin-top: 10px;
+}
+
+#rate h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+
+#rate input,
+#rate textarea {
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+#rate button {
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  background: var(--main-color);
+  color: white;
+  font-size: 20px;
+  padding: 5px 15px;
+}
+#rate input:focus,
+#rate textarea:focus {
+  outline: none;
+}
+
+/* End Rate - Section */
+
+/* Start - List Section */
+
+.list-section {
+  margin-top: 5%;
+}
+
+.list-section .bar {
+  background: var(--main-color);
+  border-radius: 5px;
+  height: 5vh;
+  display: grid;
+  grid-template-columns: repeat(5, 23% 23% 23% 23% 8%);
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.list-section .item {
+  display: grid;
+  grid-template-columns: repeat(5, 23% 23% 23% 23% 8%);
+  margin-bottom: 15px;
+  border: 1px solid var(--main-color);
+}
+
+.list-section .item img {
+  height: 25vh !important;
+  padding: 10px;
+}
+
+.list-section .item div {
+  border-left: 1px solid var(--main-color);
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.list-section .item div:nth-child(4) {
+  border-right: 1px solid var(--main-color);
+}
+.list-section h5 {
+  margin: auto !important;
+}
+
+.list-section button {
+  border: none;
+  background: none;
+  color: var(--main-color);
+}
+/* End - List Section */
