@@ -1,0 +1,355 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --color: #e50914;
+  --text-color: #191d2b;
+  --bg-color: #ffffff;
+}
+
+body {
+  font-family: sans-serif;
+  color: red;
+}
+
+/* Navbat Section */
+
+.container {
+  color: var(--text-color);
+}
+
+nav {
+  background: var(--color) !important;
+}
+
+.navbar img {
+  width: 50px;
+}
+
+nav .navbar-toggler {
+  border-color: white !important;
+  color: white !important;
+}
+
+nav .link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+nav li {
+  margin: auto;
+}
+
+nav ul button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+nav ul svg {
+  cursor: pointer;
+  color: white;
+}
+
+/* End Of Navbar Section */
+
+/* Search Box Section */
+
+.search-box {
+  text-align: center;
+  margin: 100px 0px;
+}
+
+.search-box form {
+  max-width: 400px;
+  margin: auto;
+}
+
+.input-style {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 5px 15px;
+  font-size: 20px;
+  border: 1px solid var(--color);
+  outline: none;
+  border-radius: 50px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.edit-btn {
+  background: var(--color);
+  color: white;
+  padding: 3px 12px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.search-box form button {
+  padding: 5px 12px;
+}
+
+/* End of Search Box Section */
+
+/* Start of Display Result */
+
+.title {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 120px;
+}
+
+.row img {
+  width: 100%;
+  height: 330px;
+  display: block;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* End of Display Result */
+
+/* Rate Section */
+
+.rate-box {
+  margin: 50px 0px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.rate-box input,
+.rate-box textarea {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--color);
+  outline: none;
+  border-radius: 3px;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.rate-box textarea {
+  resize: vertical;
+  padding: 8px;
+}
+.rate-box img {
+  height: 380px;
+  display: block;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Start of Popup */
+
+.popup {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 3px;
+  box-shadow: 0 0 10px var(--color);
+  z-index: 9999;
+}
+
+.countdownBar {
+  width: 90%;
+  height: 10px;
+  background-color: #ccc;
+  margin: 10px 0px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  z-index: 9998;
+}
+
+.countdownFill {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  background-color: var(--color);
+}
+
+/* End of Popup */
+
+/* End Of Rate Section */
+
+/* Start My Rates Section */
+
+.myrates .item {
+  display: grid;
+  grid-template-columns: repeat(5, calc(100% / 5));
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color);
+  margin-bottom: 20px;
+}
+
+.myrates img {
+  width: 60%;
+}
+
+.myrates p {
+  width: 95%;
+  height: auto;
+  overflow-wrap: break-word;
+}
+
+.myrates input {
+  border: 1px solid var(--color);
+  border-radius: 2px;
+  outline: none;
+  padding: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.myrates button {
+  padding: 5px 15px;
+  border: 1px solid var(--color);
+  border-radius: 3px;
+  outline: none;
+  background: white;
+  color: var(--color);
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.myrates button:hover {
+  background: var(--color);
+  color: white;
+}
+
+/* End My Rates Section */
+
+/* Contact Section */
+
+.contact-section {
+  height: calc(100vh - 103px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.contact-section span {
+  color: var(--color);
+}
+
+.contact-box {
+  width: 400px;
+  border: 3px solid var(--color);
+  border-radius: 15px;
+  margin: 0px 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-section input {
+  width: 100%;
+}
+
+.contact-section textarea {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 5px 15px;
+  border: 1px solid var(--color);
+  border-radius: 3px;
+  outline: none;
+  font-size: 20px;
+  width: 100%;
+}
+
+.contact-section button {
+  background: none;
+  border: 1px solid var(--color);
+  border-radius: 50px;
+  font-size: 20px;
+  width: 80%;
+  color: var(--text-color);
+  padding: 5px 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-section button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  z-index: -1;
+  transition: transform 0.4s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.contact-section button::before {
+  transform: scaleX(0);
+}
+
+.contact-section button:hover::before {
+  transform: scaleX(1);
+}
+
+button:hover {
+  color: white;
+}
+
+.created {
+  padding: 5px 0px;
+  background: var(--color);
+  color: white;
+  text-align: center;
+}
+
+.created span {
+  margin: 0px 5px;
+}
+
+/* End Contact Sectio */
+
+@media (min-width: 1212px) {
+  .row img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .search-box input {
+    width: 150px;
+    margin: 0px 5px 0px 0px;
+    font-size: 16px;
+  }
+  .edit-btn {
+    padding: 2px 7px;
+    font-size: 16px;
+  }
+}
