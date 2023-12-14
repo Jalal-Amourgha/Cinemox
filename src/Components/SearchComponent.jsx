@@ -3,7 +3,7 @@ import { useGlobalContext } from "./Context";
 
 const SearchComponent = () => {
   const [search, setSearch] = useState("");
-  const { result, changeDisplay, updateResult } = useGlobalContext();
+  const { setIsLoading, changeDisplay, updateResult } = useGlobalContext();
   const searchValue = useRef("");
 
   const url = `https://online-movie-database.p.rapidapi.com/auto-complete?q=${search}`;
@@ -19,6 +19,7 @@ const SearchComponent = () => {
     try {
       const response = await fetch(url, options);
       const data = await response.json();
+      setIsLoading(false);
 
       updateResult([data]);
     } catch (error) {

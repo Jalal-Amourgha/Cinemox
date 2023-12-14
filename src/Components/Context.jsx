@@ -4,6 +4,7 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [displayRecentSearch, setDisplayRecentSearch] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState([]);
   const [myRateList, setMyRateList] = useState(
     JSON.parse(localStorage.getItem("myVariable")) || []
@@ -49,6 +50,8 @@ const AppProvider = ({ children }) => {
         displayRecentSearch,
         changeDisplay,
         result,
+        isLoading,
+        setIsLoading,
         updateResult,
         myRateList,
         updateMyRateList,

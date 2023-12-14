@@ -101,6 +101,42 @@ nav ul svg {
 
 /* End of Search Box Section */
 
+/* Loading */
+
+.loader {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-width: 5px;
+  border-color: var(--color);
+  border-style: dashed dashed solid solid;
+  border-radius: 50%;
+  animation: right-rotate 2s infinite linear;
+}
+
+.loader::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  margin: auto;
+  border-width: 5px;
+  border-color: var(--text-color);
+  border-style: dashed solid dashed solid;
+  border-radius: 50%;
+  animation: left-rotate 1s infinite linear;
+}
+
+/* Loading */
+
 /* Start of Display Result */
 
 .title {
@@ -147,6 +183,11 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.rate-box input {
+  margin-right: 10px;
+}
+
 .rate-box textarea {
   resize: vertical;
   padding: 8px;
@@ -335,6 +376,26 @@ button:hover {
 }
 
 /* End Contact Sectio */
+
+@keyframes right-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes left-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
 
 @media (min-width: 1212px) {
   .row img {
