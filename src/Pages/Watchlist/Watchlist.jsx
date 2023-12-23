@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useGlobalContext } from "./Context";
+import "./watchlist.css";
+import { useGlobalContext } from "../../Components/Context";
 
-const MyRates = () => {
+const Watchlist = () => {
   const [chnageRate, setChangeRate] = useState("");
   const [chnageNote, setChangeNote] = useState("");
   const [edit, setEdit] = useState(false);
@@ -27,16 +28,16 @@ const MyRates = () => {
 
   if (myRateList.length === 0) {
     return (
-      <div className="container">
-        <h1 className="mt-5 text-center">No Items Availabel</h1>
+      <div className="container m-100">
+        <h1 className="mt-5 text-center">No Items Added</h1>
       </div>
     );
   } else {
     return (
-      <div className="container">
-        <div className="myrates text-center mt-4 mb-4">
-          <h1 className="mb-5">My Rates</h1>
-          <div className="myrates-box">
+      <div className="container m-100">
+        <div className="watchlist text-center mt-4 mb-4">
+          <h1 className="mb-5">My Watchlist</h1>
+          <div className="watchlist-box">
             {myRateList.map((item) => (
               <div key={item.name} className="item">
                 <div className="d-flex justify-content-center align-items-center">
@@ -87,4 +88,4 @@ const MyRates = () => {
   }
 };
 
-export default MyRates;
+export default Watchlist;

@@ -1,0 +1,38 @@
+.rate-box {
+  margin: 50px 0px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.rate-box input,
+.rate-box textarea {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--color);
+  outline: none;
+  border-radius: 3px;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.rate-box input {
+  margin-right: 10px;
+}
+
+.rate-box textarea {
+  resize: vertical;
+  padding: 8px;
+}
+.rate-box img {
+  height: 380px;
+  display: block;
+  object-fit: cover;
+  border-radius: 3px;
+}

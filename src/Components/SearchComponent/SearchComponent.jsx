@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useGlobalContext } from "./Context";
+import "./search.css";
+import { useGlobalContext } from "../Context";
 
 const SearchComponent = () => {
   const [search, setSearch] = useState("");
@@ -40,18 +41,22 @@ const SearchComponent = () => {
 
   return (
     <div className="search-box">
-      <h3 className="mb-4">SEARCH FOR YOUR FAVORITE SERIE OR MOVIE</h3>
+      <h3 className="mb-4 text-white">
+        SEARCH FOR YOUR FAVORITE SERIE OR MOVIE
+      </h3>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Search Here"
-          ref={searchValue}
-          className="input-style"
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button type="submit" className="edit-btn">
-          Search
-        </button>
+        <div className="position-relative">
+          <input
+            type="text"
+            placeholder="Search Here"
+            ref={searchValue}
+            className="input-style"
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <span>
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </span>
+        </div>
       </form>
     </div>
   );

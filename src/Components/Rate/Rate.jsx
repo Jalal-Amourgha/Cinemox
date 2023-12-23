@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./rate.css";
 import { useLocation } from "react-router-dom";
-import { useGlobalContext } from "./Context";
+import { useGlobalContext } from "../Context";
 
 const Rate = () => {
   const { myRateList, updateMyRateList } = useGlobalContext();
@@ -95,7 +96,7 @@ const Rate = () => {
                 id="rate"
                 max={10}
                 min={0}
-                placeholder="10"
+                placeholder="?"
                 value={myRate}
                 onChange={(e) => setMyRate(e.target.value)}
               />

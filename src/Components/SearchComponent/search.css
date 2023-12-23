@@ -1,0 +1,86 @@
+.search-box {
+  text-align: center;
+  margin: 100px 0px;
+}
+
+.search-box form {
+  max-width: 350px;
+  margin: auto;
+}
+
+.input-style {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 5px 15px;
+  font-size: 20px;
+  border: 1px solid var(--color);
+  outline: none;
+  border-radius: 50px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  width: 100%;
+}
+
+.search-box form span {
+  position: absolute;
+  right: 0px;
+  top: 0%;
+  height: 41px;
+  width: 43px;
+  display: flex;
+  background: var(--color);
+  color: white;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 0px 50px 50px 0px;
+  font-size: 1.2rem;
+}
+
+.edit-btn {
+  background: var(--color);
+  color: white;
+  padding: 3px 12px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.popup {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 3px;
+  box-shadow: 0 0 10px var(--color);
+  z-index: 9999;
+}
+
+.countdownBar {
+  width: 90%;
+  height: 10px;
+  background-color: #ccc;
+  margin: 10px 0px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  z-index: 9998;
+}
+
+.countdownFill {
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  background-color: var(--color);
+}

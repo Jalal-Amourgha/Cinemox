@@ -1,0 +1,22 @@
+.error-page {
+  min-height: 100vh;
+
+  z-index: 1000;
+  background: var(--bg-color);
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.error-img-box {
+  max-width: 512px;
+  margin: auto;
+}
+
+.error-page img {
+  width: 100%;
+}
+
+.error-btn {
+  text-decoration: none;
+  color: var(--color);
+}

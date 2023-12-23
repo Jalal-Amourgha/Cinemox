@@ -1,0 +1,181 @@
+.contact-boxes {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  height: 500px;
+}
+.contact-boxes .socials-box {
+  padding: 40px 30px;
+  background: white;
+  color: #333;
+  position: relative;
+}
+
+.contact-boxes .socials-box a {
+  text-decoration: none;
+}
+.contact-boxes .socials-box svg {
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.contact-boxes .social-box p {
+  margin-left: 15px;
+}
+
+.contact-boxes .socials-box ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+
+.contact-boxes .socials-box li {
+  margin-right: 20px;
+
+  transition: 0.6s;
+}
+
+.contact-boxes .socials-box li:hover {
+  -webkit-animation: rotate-center 0.6s ease-in-out both;
+  animation: rotate-center 0.6s ease-in-out both;
+  color: var(--color);
+}
+
+.contact-boxes .socials-box li svg {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.contact-boxes .contact-box {
+  padding: 40px 30px;
+  background: var(--color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact-boxes .contact-box .arrow {
+  height: 40px;
+  width: 40px;
+  background: var(--color);
+  position: absolute;
+  top: 15%;
+  left: -20px;
+  transform: rotate(45deg);
+  border-bottom-left-radius: 5px;
+}
+
+.contact-boxes input {
+  width: 80%;
+  padding-left: 50px;
+}
+
+.contact-boxes .contact-box input,
+.contact-boxes .contact-box textarea {
+  background: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+.contact-boxes .contact-box textarea {
+  padding-left: 15px;
+}
+
+.contact-boxes .contact-box .input-icon {
+  position: absolute;
+  top: 22%;
+  left: 13%;
+  color: white;
+  font-size: 20px;
+}
+
+.contact-boxes button {
+  background: none;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 80%;
+  color: var(--text-color);
+  padding: 5px 10px;
+  margin: 10px 0px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.contact-boxes button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transition: transform 0.4s;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.contact-boxes button::before {
+  transform: scaleX(0);
+}
+
+.contact-boxes button:hover::before {
+  transform: scaleX(1);
+}
+
+.contact-boxes button:hover {
+  color: var(--color);
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-boxes {
+    grid-template-columns: 100%;
+    height: 1000px;
+  }
+
+  .contact-boxes .arrow {
+    top: -18px !important;
+    left: 15% !important;
+  }
+  .contact-boxes input,
+  .contact-boxes textarea {
+    width: 100% !important;
+  }
+  .contact-boxes .input-icon {
+    left: 4% !important;
+  }
+}

@@ -1,0 +1,35 @@
+.footer {
+  padding: 15px 0px;
+}
+
+.footer img {
+  width: 130px !important;
+  margin: 8px 0px;
+}
+
+.footer li {
+  margin-bottom: 10px;
+}
+
+.footer .footer-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.footer .footer-link:hover {
+  color: var(--color);
+}
+
+.footer svg {
+  margin-right: 10px;
+}
+.footer span {
+  color: var(--color);
+  margin: 0px 10px;
+}
+
+@media (max-width: 575px) {
+  .footer .footer-box {
+    margin-bottom: 20px;
+  }
+}

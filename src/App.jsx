@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
-import MyRates from "./Components/MyRates";
-import Rate from "./Components/Rate";
-import Contact from "./Components/Contact";
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Pages/Home";
+import Watchlist from "./Pages/Watchlist/Watchlist";
+import Rate from "./Components/Rate/Rate";
+import Contact from "./Pages/Contact/Contact";
+import Registration from "./Pages/Registration/Registration";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -13,10 +16,11 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
-          <Route path="/MyRates" element={<MyRates />}></Route>
           <Route path="/Rate/:id" element={<Rate />}></Route>
-          <Route path="/MyRates" element={<MyRates />}></Route>
+          <Route path="/Watchlist" element={<Watchlist />}></Route>
+          <Route path="/Registration" element={<Registration />}></Route>
           <Route path="/Contact" element={<Contact />}></Route>
+          <Route path="/*" element={<ErrorPage />}></Route>
         </Routes>
       </BrowserRouter>
     </>

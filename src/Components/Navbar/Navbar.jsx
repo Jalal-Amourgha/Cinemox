@@ -1,25 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import "./navbar.css";
 import { Link } from "react-router-dom";
-import icon from "../images/icon.PNG";
+import icon from "../../images/icon.PNG";
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const chnageMode = () => {
-    if (darkMode) {
-      root.style.setProperty("--bg-color", "#ffffff");
-      root.style.setProperty("--text-color", "#191d2b");
-      document.querySelector("body").style.backgroundColor = "#ffffff";
-      setDarkMode(false);
-    } else {
-      root.style.setProperty("--bg-color", "#191d2b");
-      root.style.setProperty("--text-color", "#ffffff");
-      document.querySelector("body").style.backgroundColor = "#191d2b";
-      setDarkMode(true);
-    }
-  };
-
   return (
-    <nav className="navbar navbar-expand-lg">
+    <nav className="navbar navbar-expand-lg position-fixed ">
       <div className="container">
         <Link to="/">
           <img src={icon} alt="logo" />
@@ -43,19 +29,19 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/MyRates" className="link">
-                My Rates
+              <Link to="/Watchlist" className="link">
+                Watchlist
+              </Link>
+            </li>
+            <li className="text-white">
+              <Link to="/Registration" className="link">
+                Registration
               </Link>
             </li>
             <li>
               <Link to="/Contact" className="link">
                 Contact
               </Link>
-            </li>
-            <li className="text-white">
-              <button onClick={() => chnageMode()}>
-                <i className="fa-solid fa-moon fs-5"></i>
-              </button>
             </li>
           </ul>
         </div>

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import "./result.css";
 import { Link } from "react-router-dom";
-import { useGlobalContext } from "./Context";
-import errorImg from "../images/error.jpg";
+import { useGlobalContext } from "../Context";
+import errorImg from "../../images/error.jpg";
 
 const DisplayResult = () => {
   const { result, isLoading } = useGlobalContext();
@@ -26,7 +27,11 @@ const DisplayResult = () => {
                   {typeof item.i === "undefined" ? (
                     <img src={errorImg} alt="This img does not exist" />
                   ) : (
-                    <img src={item.i.imageUrl} alt={item.l} />
+                    <img
+                      src={item.i.imageUrl}
+                      alt={item.l}
+                      className="img-style"
+                    />
                   )}
                 </div>
                 <div className="img-details">
@@ -35,13 +40,13 @@ const DisplayResult = () => {
                     Category : <strong>{item.q}</strong> <br /> Published in :
                     <strong> {item.y}</strong>
                   </p>
-                  <div className="text-center">
+                  <div className="text-center mt-3">
                     <Link
                       to={`/Rate/${index}`}
                       state={item}
                       className="edit-btn"
                     >
-                      Rate
+                      Add Item
                     </Link>
                   </div>
                 </div>

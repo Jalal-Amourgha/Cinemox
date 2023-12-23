@@ -1,0 +1,47 @@
+nav {
+  background: black;
+  z-index: 100;
+  width: 100%;
+  min-height: 67px;
+  transition: 0.4s;
+  top: 0;
+}
+
+.navbar img {
+  width: 130px;
+}
+
+nav .navbar-toggler {
+  border-color: white !important;
+  color: white !important;
+}
+
+nav .link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 15px;
+}
+nav .link:hover {
+  color: var(--color);
+}
+
+nav li {
+  margin: auto;
+}
+
+nav ul button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 991px) {
+  ul {
+    margin-top: 30px !important;
+  }
+  nav ul li {
+    margin-bottom: 20px;
+  }
+}

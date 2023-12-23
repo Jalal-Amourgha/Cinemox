@@ -1,0 +1,9 @@
+.title {
+  height: 100px;
+}
+
+@media (max-width: 575px) {
+  .row img {
+    height: auto;
+  }
+}
