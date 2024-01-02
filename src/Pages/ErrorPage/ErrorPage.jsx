@@ -10,7 +10,6 @@ const ErrorPage = () => {
         <div className="error-img-box">
           <img src={error} alt="Error 404" />
         </div>
-
         <h1>Oops!</h1>
         <h6>We can't seem to find page you are looking for</h6>
         <Link to="/" className="error-btn">

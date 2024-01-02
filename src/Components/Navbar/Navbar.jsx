@@ -5,45 +5,63 @@ import icon from "../../images/icon.PNG";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg position-fixed ">
+    <nav className="navbar fixed-top">
       <div className="container">
         <Link to="/">
-          <img src={icon} alt="logo" />
+          <img src={icon} alt="icon" />
         </Link>
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
           aria-label="Toggle navigation"
         >
           <i className="fa-solid fa-bars"></i>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-lg-0 text-center">
-            <li>
-              <Link to="/" className="link">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/Watchlist" className="link">
-                Watchlist
-              </Link>
-            </li>
-            <li className="text-white">
-              <Link to="/Registration" className="link">
-                Registration
-              </Link>
-            </li>
-            <li>
-              <Link to="/Contact" className="link">
-                Contact
-              </Link>
-            </li>
-          </ul>
+        <div
+          className="offcanvas offcanvas-end"
+          tabIndex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src={icon} alt="icon" />
+            </h5>
+            <button
+              type="button"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <i className="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <div className="offcanvas-body">
+            <ul className="navbar-nav justify-content-end flex-grow-1 text-center pe-3">
+              <li>
+                <Link to="/" className="link">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/watchlist" className="link">
+                  Watchlist
+                </Link>
+              </li>
+              <li>
+                <Link to="/registration" className="link">
+                  Registration
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="link">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

@@ -42,11 +42,11 @@ const DisplayResult = () => {
                   </p>
                   <div className="text-center mt-3">
                     <Link
-                      to={`/Rate/${index}`}
+                      to={`/Rate/${item.l}`}
                       state={item}
                       className="edit-btn"
                     >
-                      Add Item
+                      Rate Now <i className="fa-solid fa-angle-right"></i>
                     </Link>
                   </div>
                 </div>

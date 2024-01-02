@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext } from "react";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [displayRecentSearch, setDisplayRecentSearch] = useState(true);
+  const [displaySearchResult, setDisplaySearchResult] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [result, setResult] = useState([]);
   const [myRateList, setMyRateList] = useState(
@@ -11,7 +11,7 @@ const AppProvider = ({ children }) => {
   );
 
   const changeDisplay = () => {
-    setDisplayRecentSearch(false);
+    setDisplaySearchResult(true);
   };
 
   const updateResult = (data) => {
@@ -47,7 +47,7 @@ const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        displayRecentSearch,
+        displaySearchResult,
         changeDisplay,
         result,
         isLoading,

@@ -39,16 +39,6 @@ const TopMovies = () => {
                     {item.pub} / {item.genre}
                   </h6>
                   <h3 className="title">{item.name}</h3>
-                  {/* <p className="fst-italic">
-                    Published: <strong>{item.pub}</strong>
-                    <br />
-                    Duration: <strong>{item.time}</strong>
-                    <br />
-                    Rate :{" "}
-                    <strong>
-                      {item.rate} <i className="fa-solid fa-star"></i>
-                    </strong>
-                  </p> */}
                 </div>
               </div>
             ) : (

@@ -24,11 +24,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="home" className="footer-link">
-                  Documentation
-                </Link>
-              </li>
-              <li>
                 <Link to="/Watchlist" className="footer-link">
                   Watchlist
                 </Link>

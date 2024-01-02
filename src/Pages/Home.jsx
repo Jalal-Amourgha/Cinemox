@@ -8,13 +8,14 @@ import { useGlobalContext } from "../Components/Context";
 import TvShows from "../Components/TvShows/TvShows.jsx";
 
 const Home = () => {
-  const { displayRecentSearch } = useGlobalContext();
+  const { displaySearchResult } = useGlobalContext();
   return (
     <>
       <BackgroundImage />
       <TvShows />
       <SearchComponent />
-      {displayRecentSearch ? <TopMovies /> : <DisplayResult />}
+      {displaySearchResult ? <DisplayResult /> : ""}
+      <TopMovies />
       <Footer />
     </>
   );

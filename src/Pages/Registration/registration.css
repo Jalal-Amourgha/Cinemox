@@ -1,6 +1,7 @@
-.register-box {
+/* .register-box {
   height: 600px;
-}
+  overflow-y: auto;
+} */
 .registration-boxes {
   position: relative;
   width: 100%;
@@ -8,6 +9,7 @@
   display: grid;
   grid-template-columns: 50% 50%;
   border-radius: 15px;
+  height: 600px;
 }
 
 .box1 {

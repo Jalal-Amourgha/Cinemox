@@ -31,7 +31,6 @@
 
 .contact-boxes .socials-box li {
   margin-right: 20px;
-
   transition: 0.6s;
 }
 
@@ -165,6 +164,11 @@
   .contact-boxes {
     grid-template-columns: 100%;
     height: 1000px;
+  }
+
+  .contact-box,
+  .socials-box {
+    padding: 10px !important;
   }
 
   .contact-boxes .arrow {
