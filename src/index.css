@@ -121,10 +121,14 @@ textarea::placeholder {
 
 @media (max-width: 550px) {
   .search-box input {
-    width: 150px;
     margin: 0px 5px 0px 0px;
     font-size: 16px;
   }
+
+  .search-box form span {
+    height: 36px;
+  }
+
   .edit-btn {
     padding: 2px 7px;
     font-size: 16px;

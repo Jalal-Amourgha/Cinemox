@@ -1,5 +1,5 @@
 .background-image-box {
-  background-image: url("../src/images/backgroundimage.jpg");
+  background-image: url("../../images/backgroundimage.jpg");
   background-size: cover;
   height: 100vh;
   color: var(--text-color);

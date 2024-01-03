@@ -60,7 +60,7 @@ const Rate = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container m-100">
       <h1 className="text-center mt-3">Rate Here</h1>
       {showPopup && (
         <div className="popup">

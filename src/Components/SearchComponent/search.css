@@ -53,34 +53,3 @@
   letter-spacing: 1px;
 }
 
-.popup {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  border-radius: 3px;
-  box-shadow: 0 0 10px var(--color);
-  z-index: 9999;
-}
-
-.countdownBar {
-  width: 90%;
-  height: 10px;
-  background-color: #ccc;
-  margin: 10px 0px;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50px;
-  z-index: 9998;
-}
-
-.countdownFill {
-  height: 100%;
-  width: 100%;
-  border-radius: 50px;
-  background-color: var(--color);
-}
